@@ -8,9 +8,10 @@ on my Asus Zenbook UX534FT
 
 #### Prepare Windows:
 
-- disable bitlocker
-- shrink partition to make some space available ( > 20Go) - unformated
-- download ubuntu iso, create bootable usb disk using balenaEtcher
+- Disable bitlocker
+- Shrink partition to make some space available ( > 20Go) - unformated
+- Download ubuntu iso from https://ubuntu.com/download/desktop
+- Create bootable usb disk using balenaEtcher
 
 #### Modify BIOS (UEFI) settings:
 
@@ -19,7 +20,7 @@ on my Asus Zenbook UX534FT
 
 #### Boot from Usb key:
 
-- select install ubuntu
+- Select install ubuntu
 - follow setup:
   - select language (English)
   - select keyboard layout (French - French (AZERY)) - check it's ok.
@@ -33,7 +34,7 @@ on my Asus Zenbook UX534FT
 
 - Settings Setup:
 
-  - disable screenpad display
+  - disable Screenpad display
 
     - settings / devices...
 
@@ -44,9 +45,10 @@ on my Asus Zenbook UX534FT
     ```
 
   - check graphic card used
+    
     - settings / details 
 
-- automount windows partition
+- automount **windows partition**
 
   - create a folder ( ex: in /home/user/Windows )
   - find windows partition UUID:
@@ -80,19 +82,21 @@ on my Asus Zenbook UX534FT
   sudo apt upgrade
   ```
 
+- Remove unused softwares (ex: Games) to cleanup a bit
+
 - Customize boot screen:
 
-  - install Grub Customizer
+  - install **Grub Customizer**
   - modify order for booting (ex: windows first ...)
   - select image etc...
 
-- Install git
+- Install **Git**
 
   ```bash
   sudo apt install git
   ```
 
-- install Github desktop
+- install **Github desktop**
 
   - download latest **deb** release from https://github.com/shiftkey/desktop/releases
   - install it
@@ -103,7 +107,7 @@ on my Asus Zenbook UX534FT
 
   - Launch and configure
 
-- install MiniConda
+- install **MiniConda**
 
   ```bash
   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -125,11 +129,13 @@ on my Asus Zenbook UX534FT
     conda install ipykernel
     ```
 
-- install Chromium
-- install Sublime
-- install PyCharm
+- install **Chromium**
 
-- install MS Teams:
+- install **Sublime**
+
+- install **PyCharm**
+
+- install **MS Teams**:
 
   - download latest **deb** release from https://teams.microsoft.com/downloads#allDevicesSection
 
