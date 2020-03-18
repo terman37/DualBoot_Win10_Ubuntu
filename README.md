@@ -1,6 +1,8 @@
 # My Dual boot win10 ubuntu 19.10
 
-on Asus Zenbook UX534FT
+Notes on how to setup proper dual boot Win/Linux
+
+on my Asus Zenbook UX534FT
 
 ( ! sound not working for now )
 
@@ -29,7 +31,7 @@ on Asus Zenbook UX534FT
 
 #### Boot in Ubuntu
 
-- Setup:
+- Settings Setup:
 
   - disable screenpad display
 
@@ -41,7 +43,8 @@ on Asus Zenbook UX534FT
     timedatectl set-local-rtc 1 --adjust-system-clock
     ```
 
-    
+  - check graphic card used
+    - settings / details 
 
 - automount windows partition
 
