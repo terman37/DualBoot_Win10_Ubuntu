@@ -129,11 +129,42 @@ on my Asus Zenbook UX534FT
     conda install ipykernel
     ```
 
-- install **Chromium**
+- install **Chrome**
+
+  - download and install
+
+    ```bash
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    ```
+    ```bash
+    sudo apt install ./google-chrome*.deb
+    ```
+
+- install **Typora**
+
+  ```bash
+  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+  ```
+
+  ```bash
+  sudo add-apt-repository 'deb https://typora.io/linux ./'
+  ```
+
+  ```bash
+  sudo apt update
+  ```
+
+  ```bash
+  sudo apt install typora
+  ```
 
 - install **Sublime**
 
-- install **PyCharm**
+  - from store
+
+- install **PyCharm CE**
+
+  - from store
 
 - install **MS Teams**:
 
