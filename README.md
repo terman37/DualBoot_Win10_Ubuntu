@@ -9,9 +9,16 @@ on my Asus Zenbook UX534FT
 #### Prepare Windows:
 
 - Disable bitlocker
+
 - Shrink partition to make some space available ( > 20Go) - unformated
+
 - Download ubuntu iso from https://ubuntu.com/download/desktop
+
 - Create bootable usb disk using balenaEtcher
+
+- Disable Fast Startup
+
+  power options / Change settings that are currently unavailable / uncheck FastStartup
 
 #### Modify BIOS (UEFI) settings:
 
@@ -47,6 +54,12 @@ on my Asus Zenbook UX534FT
   - check graphic card used
     
     - settings / details 
+    
+    - and/or
+    
+      ```bash
+      nvidia-smi
+      ```
 
 - automount **windows partition**
 
@@ -54,6 +67,7 @@ on my Asus Zenbook UX534FT
   - find windows partition UUID:
 
   ```bash
+  ls -l /dev/disk/by-label/
   ls -l /dev/disk/by-uuid/
   ```
 
@@ -66,7 +80,7 @@ on my Asus Zenbook UX534FT
   - add line in fstab (it will be mounted after reboot)
 
     ```
-    UUID=<uuid found before> /home/user/Windows ntfs-3g defaults 0 0
+    UUID=<uuid found before> <path_to_folder_created> ntfs-3g defaults 0 0
     ```
 
   - force mounting now:
@@ -81,6 +95,16 @@ on my Asus Zenbook UX534FT
   sudo apt update
   sudo apt upgrade
   ```
+  
+- Hide icon of mounted drives from the dock
+
+  - install **dconf editor**
+    - from store
+  - launch it and go to 
+    - org / gnome / shell / extensions / dash-to-dock
+  - turn off **show-mounts** option
+
+#### Install Softwares:
 
 - Remove unused softwares (ex: Games) to cleanup a bit
 
