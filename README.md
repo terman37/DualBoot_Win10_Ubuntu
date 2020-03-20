@@ -4,7 +4,7 @@ Notes on how to setup proper dual boot Win/Linux
 
 on my Asus Zenbook UX534FT
 
-( ! sound not working for now )
+( ! sound not working for now - except in HDMI )
 
 #### Prepare Windows:
 
