@@ -1,10 +1,10 @@
-# My Dual boot win10 ubuntu 20.04
+# My Dual boot Win10 / ubuntu 20.04
 
 Notes on how to setup proper dual boot Win/Linux
 
 on my Asus Zenbook UX534FT
 
-( ! sound not working for now - except in HDMI ) / fixed by script 2020-07-28
+( ! sound not working for now - except in HDMI ) / **fixed** by script 2020-07-28
 
 ### Prepare Windows
 
@@ -138,8 +138,6 @@ sudo apt upgrade
 
   ```bash
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  ```
-  ```bash
   sudo apt install ./google-chrome*.deb
   ```
 
@@ -147,7 +145,7 @@ sudo apt upgrade
 
 - install
 
-  ```
+  ```bash
   sudo add-apt-repository ppa:jtaylor/keepass
   sudo apt update
   sudo apt install keepass2 mono-complete
@@ -155,7 +153,7 @@ sudo apt upgrade
 
 - copy plugin KeepassRPC from https://github.com/kee-org/keepassrpc/releases/tag/v1.11.0
 
-  ```
+  ```bash
   sudo cp  KeePassRPC.plgx /usr/lib/keepass2/Plugins/KeePassRPC.plgx
   ```
 
@@ -262,7 +260,7 @@ sh Miniconda3-latest-Linux-x86_64.sh
 
   - python 3 (default version)
 
-    ```
+    ```bash
     python3 -m venv venv/test3
     source venv/test3/bin/activate
     pip list
@@ -272,7 +270,7 @@ sh Miniconda3-latest-Linux-x86_64.sh
 
   - python 3 (default version)
 
-    ```
+    ```bash
     python3.7 -m venv venv/test37
     source venv/test37/bin/activate
     pip list
@@ -284,17 +282,8 @@ sh Miniconda3-latest-Linux-x86_64.sh
 
 ```bash
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-```
-
-```bash
 sudo add-apt-repository 'deb https://typora.io/linux ./'
-```
-
-```bash
 sudo apt update
-```
-
-```bash
 sudo apt install typora
 ```
 
