@@ -348,5 +348,34 @@ sudo apt install typora
 
 - install from store
 
+#### Install Pentaho pdi
 
+- remove old version of java if needed
+
+  ```
+  sudo apt remove openjdk-11-jre-headless openjdk-11-jre openjdk-11-jdk-headless openjdk-11-jdk
+  ```
+
+- install jdk and jre
+
+  ```
+  sudo apt install openjdk-8-jdk
+  sudo update-alternatives --config java
+  ```
+
+- Download/extract
+
+- launch in pentaho folder
+
+  ```
+  sh spoon.sh
+  ```
+
+  - tip *"make it executable"*
+
+    > right-click on spoon.sh : properties : permissions : Allow executing file as program
+    >
+    > in file explorer menu : preferences : behavior : executable text files : run them (or ask what to do)
+
+    
 
