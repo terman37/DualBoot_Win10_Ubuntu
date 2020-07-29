@@ -141,7 +141,7 @@ sudo apt upgrade
   sudo apt install ./google-chrome*.deb
   ```
 
-#### Install Keepass2:
+#### Install Keepass2
 
 - install
 
@@ -159,7 +159,7 @@ sudo apt upgrade
 
 - install firefox extension: Kee - Password Manager by [Luckyrat](https://addons.mozilla.org/en-US/firefox/user/5248570/)
 
-#### Customize boot screen:
+#### Customize boot screen
 
 - install **Grub Customizer**
 - modify order for booting (ex: windows first ...)
