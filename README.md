@@ -104,7 +104,7 @@ sudo apt upgrade
   - org / gnome / shell / extensions / dash-to-dock
 - turn off **show-mounts** option
 
-#### Fix sound issue
+#### Fix sound issue (fixed in latest ubuntu release)
 
 - create a file /etc/rc.local
 
@@ -141,23 +141,13 @@ sudo apt upgrade
   sudo apt install ./google-chrome*.deb
   ```
 
-#### Install Keepass2
+#### Install KeepassXC
 
-- install
+- from store
 
-  ```bash
-  sudo add-apt-repository ppa:jtaylor/keepass
-  sudo apt update
-  sudo apt install keepass2 mono-complete
-  ```
+#### Install DisplayLink drivers
 
-- copy plugin KeepassRPC from https://github.com/kee-org/keepassrpc/releases/tag/v1.11.0
-
-  ```bash
-  sudo cp  KeePassRPC.plgx /usr/lib/keepass2/Plugins/KeePassRPC.plgx
-  ```
-
-- install firefox extension: Kee - Password Manager by [Luckyrat](https://addons.mozilla.org/en-US/firefox/user/5248570/)
+- https://support.displaylink.com/knowledgebase/articles/684649
 
 #### Customize boot screen
 
