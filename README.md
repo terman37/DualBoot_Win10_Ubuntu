@@ -210,15 +210,22 @@ sh Miniconda3-latest-Linux-x86_64.sh
     sudo tar xzf Python-3.7.8.tgz
     ```
 
+  - Install required lib
+
+    ```
+    sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev \
+    zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev libreadline-dev \
+    libncursesw5-dev libffi-dev uuid-dev
+    ```
+
   - compile (make alt install to keep existing configsudo)
 
     ```bash
-    cd /usr/src
     cd Python-3.7.8
     sudosudo ./configure --enable-optimizations
     sudo make altinstall
     ```
-
+    
   - check
 
     ```bash
@@ -279,27 +286,27 @@ sudo apt install typora
 
 #### Install **Sublime**
 
-- from store
-
-> #### install **PyCharm CE** - Switch to VSCode
-
-- from store
+```bash
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt update
+sudo apt install sublime-text
+```
 
 #### Install **VSCode**
 
-- from store
+```bash
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 
-> #### install **MS Teams**: - Not needed anymore
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
 
-> - download latest **deb** release from     https://teams.microsoft.com/downloads#allDevicesSection
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
-- install it
-
-  ```bash
-  sudo apt install ./teams*.deb
-  ```
-
-- Launch and configure
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code
+```
 
 #### Install Docker
 
@@ -327,9 +334,9 @@ sudo apt install typora
   sudo usermod -aG docker ${USER}
   ```
 
-- docker compose (1.26.2) official doc https://docs.docker.com/compose/install/
+- docker compose (1.28.2) official doc https://docs.docker.com/compose/install/
   ```bash
-  sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   
   sudo chmod +x /usr/local/bin/docker-compose
   ```
