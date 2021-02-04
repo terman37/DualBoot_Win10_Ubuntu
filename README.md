@@ -343,7 +343,13 @@ sudo apt-get install code
 
 #### Install DBeaver
 
-- install from store
+```
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+sudo apt-get update
+sudo apt-get install dbeaver-ce
+```
+
+
 
 #### Install Pentaho pdi
 
