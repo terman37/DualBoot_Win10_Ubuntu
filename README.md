@@ -143,7 +143,11 @@ sudo apt upgrade
 
 #### Install KeepassXC
 
-- from store
+```bash
+sudo add-apt-repository ppa:phoerious/keepassxc
+sudo apt update
+sudo apt install keepassxc
+```
 
 #### Install DisplayLink drivers
 
