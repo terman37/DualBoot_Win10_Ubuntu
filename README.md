@@ -39,6 +39,16 @@ on my Asus Zenbook UX534FT
 
 ### Boot in Ubuntu
 
+#### Auto install script:
+
+All steps below have been automated using script. 
+
+download install.sh, allow execution and run it
+
+```bash
+./install.sh
+```
+
 #### Settings Setup:
 
 - disable Screenpad display
