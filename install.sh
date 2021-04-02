@@ -155,6 +155,9 @@ sudo apt install -y gimp
 sudo apt install -y python3-pip
 sudo pip3 install pip setuptools wheel --upgrade
 
+# Evolution Mail
+sudo apt install -y evolution
+
 ############
 
 # Chrome
@@ -190,4 +193,4 @@ rm displaylink*.run
 
 ####################################################
 # Set Taskbar favorites
-gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'github-desktop.desktop', 'code.desktop', 'dbeaver.desktop']"
+gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnome.Evolution.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'github-desktop.desktop', 'code.desktop', 'dbeaver.desktop']"
