@@ -404,3 +404,47 @@ sudo apt install gimp
 
     
 
+
+
+
+
+### Shell (byobu + zsh)
+
+##### install byobu / zsh / powerline-fonts
+
+```bash
+sudo apt install -y byobu zsh fonts-powerline
+```
+
+##### install oh-my-zsh
+
+```bash
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+##### change theme 
+
+```bash
+nano ~/.zshrc
+# change theme line to agnoster
+ZSH_THEME="agnoster"
+```
+
+##### config byobu
+
+```bash
+touch ~/.byobu/.tmux.conf
+echo "set -g mouse on" >> ~/.byobu/.tmux.conf
+echo "set -g mouse-utf8 on" >> ~/.byobu/.tmux.conf
+echo "set -g default-shell /usr/bin/zsh" >> ~/.byobu/.tmux.conf
+echo "set -g default-command /usr/bin/zsh" >> ~/.byobu/.tmux.conf
+```
+
+##### byobu as default in terminal
+
+- in terminal preferences, create a profile "byobu"
+- in command tab, select run a custom command instead of my shell
+- custom command: /usr/bin/byobu
+
+
+
