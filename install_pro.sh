@@ -6,6 +6,7 @@ separator="#####################################################################
 # install
 
 # evolution ews
+# Pulse client
 # zoom
 # slack
 # kubectl
@@ -19,9 +20,27 @@ separator="#####################################################################
 # dbeaver
 # Chrome
 # zsh
+# ohmyzsh
 
-# add aliases and autocompletion
+# font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+unzip Hack.zip -d ./hack && rm Hack.zip
+find ./hack -iname "*Windows*" -exec rm {} \; # suppression des fonts compatible Windows.
+sudo mv hack /usr/share/fonts/
+fc-cache -v
 
+
+# add aliases / autocompletion / plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# dans zshrc ajouter
+HIST_STAMPS="yyyy-mm-dd"
+
+# Powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 echo $separator
 echo "2.UPDATE & DEPENDENCIES"
@@ -101,7 +120,11 @@ echo -e "\t Dbeaver"
 sudo apt install -y dbeaver-ce
 
 # ZSH and oh-my-zsh and theme
-sudo apt install -y zsh fonts-powerline
+
+
+
+
+sudo apt install -y zsh # fonts-powerline
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sed -i 's/^ZSH_THEME=\".*\"/ZSH_THEME=\"agnoster\"/' .zshrc
 
